@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Payment</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+      background-size: 200% 200%;
+      animation: gradientMove 8s infinite alternate;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    .payment-container {
+      width: 430px;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .method-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: 0.25s;
+    }
+
+    .method-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+    }
+
+    .method-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .number {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e0f2ff;
+    }
+
+    .name {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 3px;
+    }
+
+    img.qris {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .note {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="payment-container">
+    <h2>💳 Open Payment</h2>
+
+    <div class="method-box">
+      <div class="method-title">DANA</div>
+      <div class="number">0813-1159-010</div>
+      <div class="name">A/N: IPUNGG SHOP</div>
+    </div>
+
+    <div class="method-box">
+      <div class="method-title">GOPAY</div>
+      <div class="number">0838-4081-0226</div>
+      <div class="name">A/N: IPUNGG SHOP</div>
+    </div>
+
+    <div class="method-box">
+      <div class="method-title">QRIS</div>
+      <img class="qris" src="https://img1.pixhost.to/images/10280/662622750_lyrra-md.jpg" alt="QRIS">
+    </div>
+
+    <p class="note">
+      Silakan lakukan pembayaran ke salah satu metode di atas dan kirimkan bukti transaksi.
+    </p>
+  </div>
+
+</body>
+</html>
