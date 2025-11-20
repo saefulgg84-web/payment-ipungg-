@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Payment</title>
+  <title>PAYMENT IPUNGG</title>
 
   <style>
     body {
@@ -74,6 +74,21 @@
       margin-top: 3px;
     }
 
+    .copy-btn, .download-btn {
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .copy-btn:hover, .download-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
     img.qris {
       width: 100%;
       border-radius: 15px;
@@ -93,29 +108,45 @@
 <body>
 
   <div class="payment-container">
-    <h2>💳 Open Payment</h2>
+    <h2>💳 PAYMENT IPUNGG</h2>
 
+    <!-- DANA -->
     <div class="method-box">
       <div class="method-title">DANA</div>
-      <div class="number">0813-1159-010</div>
+      <div class="number" id="danaNumber">0813-1159-010</div>
       <div class="name">A/N: IPUNGG SHOP</div>
+      <button class="copy-btn" onclick="copyText('danaNumber')">📋 Salin Nomor</button>
     </div>
 
+    <!-- GOPAY -->
     <div class="method-box">
       <div class="method-title">GOPAY</div>
-      <div class="number">0838-4081-0226</div>
+      <div class="number" id="gopayNumber">0838-4081-0226</div>
       <div class="name">A/N: IPUNGG SHOP</div>
+      <button class="copy-btn" onclick="copyText('gopayNumber')">📋 Salin Nomor</button>
     </div>
 
+    <!-- QRIS -->
     <div class="method-box">
       <div class="method-title">QRIS</div>
       <img class="qris" src="https://img1.pixhost.to/images/10280/662622750_lyrra-md.jpg" alt="QRIS">
+      <a href="https://img1.pixhost.to/images/10280/662622750_lyrra-md.jpg" download>
+        <button class="download-btn">⬇ Download QRIS</button>
+      </a>
     </div>
 
     <p class="note">
-      Silakan lakukan pembayaran ke salah satu metode di atas dan kirimkan bukti transaksi.
+      Silakan lakukan pembayaran lalu kirim bukti transaksi.
     </p>
   </div>
+
+  <script>
+    function copyText(elementId) {
+      let text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text);
+      alert("Nomor berhasil disalin: " + text);
+    }
+  </script>
 
 </body>
 </html>
